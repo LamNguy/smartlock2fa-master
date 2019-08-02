@@ -1,0 +1,26 @@
+<%include partials/head.ejs%>
+
+<div class="mngt-container">
+
+    <div class="mngt-header" id="test">
+        <input type="text" id="myInput" onkeyup="filterLog()" placeholder="Search for names..">
+    </div>
+    <div class="break">
+    </div>
+    <div class="mngt-body">
+        <%console.log(logTitles)%>
+        <ul id='mngt-logs-list'>
+            <% if (typeof logTitles !== 'undefined')
+                logTitles.forEach(function(title){ %>
+            <li class='mngt-log-item' id='<%=title%>'>
+                <a href='#' id='<%=title%>-title' onclick="toggle(this)">
+                    <%=title%></a>
+                <div class='mngt-log-content' id='<%=title%>-content' data-loaded="false" hidden>
+                    Loading...
+                </div>
+            </li>
+            <%      }); %>
+            </>
+    </div>
+
+    <%include partials/foot.ejs%>

@@ -1,0 +1,26 @@
+<%include partials/head.ejs%>
+
+
+<div class="container" id="notif" style="margin-top: 170px">
+
+
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-sm-12">
+      <div class="panel panel-info">
+        <p class="instruction">Door control</p>
+        <div class="panel-body">
+          <form accept-charset='UTF-8' method='POST' role='form' id="unlockForm">
+            <div class="form-group">
+              <input type="submit" id="unlockBtn" class="btn btn-success btn-lg btn-lock" value="Unlock">
+            </div>
+            <span id="controlResMsg"
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/javascripts/door-control.js"></script>
+
+<%include partials/foot.ejs%>

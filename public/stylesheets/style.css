@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("technical_lock.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+.panel {
+  border: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffff;
+  text-align: center;
+  padding: inherit;
+  padding-top: 70px;
+  position: relative;
+  transition: 1s;
+}
+
+h4, h2 {
+  margin: 0;
+  padding: 0;
+  color: #f9df05;
+  font-family: "Righteous", cursive;
+}
+
+.lock {
+  position: absolute;
+  top: -50px;
+  width: 100px;
+  height: 100px;
+  line-height: 112px;
+  text-align: center;
+  left: 37%;
+  background: linear-gradient(DarkSlateGray, Cyan);
+  border: 3px outset #f4e10a;
+  border-radius: 100%;
+  color: #fff;
+  box-shadow: -10px 10px 20px rgba(255, 255, 255, 0.5);
+}
+
+.panel:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.btn-success {
+  border: 0px;
+}
+
+.navbar-default {
+  background-color: #02101e;
+  background: rgba(0, 0, 0, 0.4);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #49ea09;
+}
+.navbar-default .navbar-nav>.open>a:focus {
+  color: #49ea09;
+  background-color: transparent;
+}
+
+p {
+  font-size: 15px;
+}
+
+.instruction {
+  font-size: 30px;
+}
+
+.mngt-container {
+  height: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mngt-header {
+  padding: 5% 15% 8% 15%;
+  height: 20%;
+}
+
+.mngt-body {
+  padding-top: 1%;
+  height: 80%;
+  overflow: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.mngt-body li {
+  padding: 5px 10px 5px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #49ea09;
+}
+
+.mngt-log-item {
+  font-size: 14pt;
+  margin-bottom: 2px;
+}
+
+.mngt-log-item:hover {
+  background: rgba(4, 5, 22, 0.8);
+  font-size: 18pt;
+  padding-left: 3px;
+  text-align: center;
+}
+
+.mngt-log-content {
+  background: rgba(0, 0, 0, 0.8);
+  color: aquamarine;
+  font-size: 12pt;
+  padding: 12px;
+  text-align: left;
+  height: 40%;
+  overflow: auto;
+}
+
+.break {
+  background: rgba(255, 255, 254, 0.6);
+  height: 0.1%;
+}
+
+#myInput {
+  width: 100%;
+  border-radius: 48px;
+  height: 40px;
+  padding-left: 4%;
+  outline: none;
+}
+
+input:invalid {
+  border-style: solid;
+  border-color: red;
+  border-width: 2px;
+}
+input,
+input:valid {
+  border-style: solid;
+  border-color: rgb(24, 55, 228);
+  color: black;
+}
+
+.modal-header, .close {
+  background-color: #5cb85c;
+  color:white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
+}
+
+#notify-pass, #notify-image {
+  color: red;
+}
+
+input.file {
+  margin: auto;
+  border-radius: 5px;
+}
+
+.uploadImg p {
+  color: black;
+}
+
+table.table.table-bordred {
+  background-color: rgba(0, 0, 0, 1.5);
+  color: #fff;
+}
+
+tr:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#uploadImg p {
+  color: #000;
+}
+
+.btn-default.btn-on.active{
+  background-color: #5BB75B;
+  color: white;
+}
+
+.btn-default.btn-off.active{
+  background-color: #DA4F49;
+  color: white;
+}
+
+th, td {
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 7px;
+}
+
+.modal-body {
+  padding: 11px 45px;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-bottom: 0px;
+}
+
+.glyphicon-minus-sign {
+  color: red;
+}
+
+h2 {
+  text-align: center;
+}

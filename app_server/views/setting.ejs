@@ -1,0 +1,136 @@
+<%include partials/head.ejs%>
+
+<div class="container" id="otpContainer" style="margin-top: 170px">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 col-sm-12">
+			<div class="panel panel-default">
+				<h4>Account Setting</h4>
+				<div class="panel-body">
+
+					<button class='btn btn-lg btn-primary' id='uploadImage' style='margin: 5px 10px 10px;'>
+						<i class="glyphicon glyphicon-open"></i>&nbsp; Upload image
+					</button>
+					<div class="modal fade" id="imageModal" role="dialog">
+						<div class="modal-dialog">
+
+							<!-- Modal content-->
+							<%
+								var name = userName;
+							%>
+							<div class="modal-content">
+								<div class="modal-body">
+									<form method="post" id='uploadImg' enctype="multipart/form-data" action='/upload'>
+										<div class="form-group">
+											<p>File format: JPG/JPEG/PNG</p>
+											<p>Name your image files as: "<%= name %>-ImageIndex"</p>
+											<p>Eg:
+												<%= name%>-1.jpg</p>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-10">
+													<input type="file" class="file" name="photo" accept="image/*" required>
+												</div>
+												<div class="col-md-2">
+													<span class="glyphicon glyphicon-minus-sign del"></span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-10">
+													<input type="file" class="file" name="photo" accept="image/*" required>
+												</div>
+												<div class="col-md-2">
+													<span class="glyphicon glyphicon-minus-sign del"></span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="row">
+												<div class="col-md-10">
+													<input type="file" class="file" name="photo" accept="image/*" required>
+												</div>
+												<div class="col-md-2">
+													<span class="glyphicon glyphicon-minus-sign del"></span>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<button class="btn btn-success btn-md addBtn" title="Add more..">
+												<span class="glyphicon glyphicon-plus-sign"></span>
+											</button>
+										</div>
+										<div class="form-group">
+											<input type="submit" id="upload" class="btn btn-success" value="Submit">
+										</div>
+
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>
+										Cancel</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<br>
+
+					<button class='btn btn-lg btn-primary' id="changePassword"><i class="glyphicon glyphicon-pencil"></i>&nbsp;
+						Change password</button>
+					<div class="modal fade" id="passwordModal" role="dialog">
+						<div class="modal-dialog">
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-body">
+									<form method="POST" role="form" id="changePwd" action="/changepassword">
+										<div class="form-group">
+											<label for="oldpass">Current password</label>
+											<input type="password" name="oldpassword" class="form-control" id="oldpass" placeholder="Enter current password"
+											 required>
+										</div>
+										<div class="form-group">
+											<label for="newpass">New password</label>
+											<input type="password" name="newpassword" class="form-control" id="newpass" placeholder="Enter new password"
+											 required>
+										</div>
+										<div class="form-group">
+											<label for="renewpass">Re-enter new password</label>
+											<input type="password" name="newpasswordConfirm" class="form-control" id="renewpass" placeholder="Re-enter new password"
+											 required>
+										</div>
+										<%
+												var infoHidden = "hidden";
+												var msg = "";
+												if (typeof message !== 'undefined') {
+													infoHidden = "";
+													msg = message;
+												}
+										%>
+
+										<span <%=infoHidden%>>
+											<a href="" class="glyphicon glyphicon-warning-sign"></a>
+											&nbsp;
+											<%=msg%>
+										</span>
+										<button type="submit" id="saveChange" class="btn btn-success btn-block"> Save changes</button>
+
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span>
+										Cancel</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/javascripts/setting.js"></script>
+
+<%include partials/foot.ejs%>
